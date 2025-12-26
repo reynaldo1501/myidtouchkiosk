@@ -726,7 +726,7 @@
                 );
                 case 'PHONE_ENTRY': return (
                     <div className="flex flex-col items-center justify-center h-full w-full max-w-md mx-auto space-y-6 animate-fadeIn">
-                    <div className="text-center"><div className="inline-block p-4 bg-green-100 rounded-full mb-4"><Smartphone className="w-8 h-8 text-green-600" /></div><h3 className="text-2xl font-bold text-slate-800">Enter Mobile Number</h3><p className="text-slate-500">We will send a 4-digit code to verify your identity.</p></div>
+                    <div className="text-center"><div className="inline-block p-4 bg-green-100 rounded-full mb-4"><Smartphone className="w-8 h-8 text-green-600" /></div><h3 className="text-2xl font-bold text-slate-800">Enter Mobile Number Linked To Your MyDigitalID</h3><p className="text-slate-500">We will send a 4-digit code to verify your identity.</p></div>
                     <div className="w-full bg-white p-6 rounded-xl shadow-md border border-slate-200"><label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Mobile Number</label><div className="flex items-center border-2 border-slate-300 rounded-lg focus-within:border-green-500 focus-within:ring-4 focus-within:ring-green-100 transition-all overflow-hidden"><div className="bg-slate-100 px-4 py-3 border-r border-slate-300 font-bold text-slate-600">+60</div><input type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} placeholder="12 345 6789" className="flex-1 text-2xl tracking-wide p-3 focus:outline-none font-mono text-slate-800 placeholder-slate-300" /></div></div>
                     <div className="flex space-x-4 w-full"><button onClick={handleSecureSessionEnd} className="flex-1 py-4 bg-slate-200 text-slate-700 rounded-lg font-bold hover:bg-slate-300">CANCEL</button><button onClick={handleSendOtp} disabled={phoneNumber.length < 5} className="flex-1 py-4 bg-green-600 text-white rounded-lg font-bold hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"><span>SEND CODE</span><ArrowRight size={20} /></button></div>
                     </div>
@@ -862,4 +862,5 @@
         const analytics = getAnalytics(app);
     </script>
 </body>
+
 </html>
